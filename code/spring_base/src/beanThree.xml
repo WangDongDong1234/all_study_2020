@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.three.Person">
+        <property name="pname" value="wdd"></property>
+        <!-- 数组 -->
+        <property name="arrs">
+            <list>
+                <value>小王</value>
+                <value>小马</value>
+                <value>小宋</value>
+            </list>
+        </property>
+
+        <!-- list -->
+        <property name="list">
+            <list>
+                <value>小奥</value>
+                <value>小金</value>
+                <value>小普</value>
+            </list>
+        </property>
+
+        <!-- map -->
+        <property name="map">
+            <map>
+                <entry key="aa" value="lucy"></entry>
+                <entry key="bb" value="mary"></entry>
+                <entry key="cc" value="tom"></entry>
+            </map>
+        </property>
+
+        <!-- properties -->
+        <property name="properties">
+            <props>
+                <prop key="driverclass">com.mysql.jdbc.Driver</prop>
+                <prop key="username">root</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>

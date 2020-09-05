@@ -1,0 +1,20 @@
+1.
+beanOne.xml中的bean使用的类的无参构造创建，如果类里面写了构造函数且类里面没有无参构造函数，就抛出异常
+
+2.
+id属性：起名称，id属性值名称任意命名
+- id属性值，不能包含特殊符号
+- 根据id值得到配置对象
+
+class属性：创建对象所在类的全路径
+
+name属性：功能和id属性一样的，id属性值不能包含特殊符号，但是在name属性值里面可以包含特殊符号
+
+3.
+scope属性（singleton|prototype）
+- singleton：默认值，单例(这个对象只能创建一次)
+- prototype：多例（每次创建都是一个新的对象）
+
+- request：创建对象把对象放到request域里面
+- session：创建对象把对象放到session域里面
+- globalSession：创建对象把对象放到globalSession里面（百度下面 有地图  知道  登录一次都可以用  ）

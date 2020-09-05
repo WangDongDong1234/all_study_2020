@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--创建bean的方式1-->
+    <bean id="user" class="com.one.User"></bean>
+    <!--创建bean的方式2一--><!--工厂静态方法调用-->
+    <bean id="bean2" class="com.one.Bean2Factory" factory-method="getBean2"></bean>
+    <!--创建bean的方式3一--><!--工厂非静态方法调用-->
+    <bean id="bean3Factory" class="com.one.Bean3Factory"></bean>
+    <bean id="bean3" factory-bean="bean3Factory" factory-method="getBean3"></bean>
+
+
+    <bean id="user2" class="com.one.User2" scope="prototype"></bean>
+
+</beans>

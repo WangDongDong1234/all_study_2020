@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="student1" class="com.two.Student1">
+        <!--
+        使用set注入属性
+            name属性值：类里面定义的属性名称
+            value属性：设置具体的值
+        -->
+        <property name="name" value="student1"></property>
+    </bean>
+
+    <bean id="student2" class="com.two.Student2">
+        <constructor-arg name="name" value="student2"></constructor-arg>
+    </bean>
+
+    <bean id="userDao1" class="com.two.UserDao"></bean>
+
+    <bean id="userService" class="com.two.UserService">
+        <property name="userDao" ref="userDao1"></property>
+    </bean>
+</beans>
